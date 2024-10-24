@@ -4,6 +4,7 @@ const redirects = {
 };
 
 function handleRedirect() {
+  console.log('Redirecting...');
   // Get the path part of the URL (after /link/)
   console.log(window.location.pathname);
   const path = window.location.pathname.split('/').pop();
