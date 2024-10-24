@@ -23,6 +23,7 @@
 
       // Function to handle redirection
       function handleRedirect() {
+        console.log('Handling redirection...');
         // Get the path part of the URL (after /link/)
         console.log(window.location.pathname);
         const path = window.location.pathname.split('/').pop();
