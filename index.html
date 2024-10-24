@@ -32,7 +32,8 @@
         if (redirects.hasOwnProperty(path)) {
           window.location.href = redirects[path]; // Redirect to the target URL
         } else {
-          window.location.href = '/404.html'; // Redirect to 404 page if not found
+          console.log('Page not found');
+          // window.location.href = '/404.html'; // Redirect to 404 page if not found
         }
       }
 
