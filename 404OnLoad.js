@@ -1,6 +1,6 @@
 const redirects = {
-  'some-other-site': 'https://www.google.com',
-  'my-page': 'https://www.example.com',
+  g: 'https://www.google.com',
+  e: 'https://www.example.com',
 };
 
 function handleRedirect() {
