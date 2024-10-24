@@ -15,7 +15,9 @@
       // Function to handle redirection
       function handleRedirect() {
         // Get the path part of the URL (after /link/)
+        console.log(window.location.pathname);
         const path = window.location.pathname.split('/').pop();
+        console.log(path);
 
         // Check if the path exists in the redirects map
         if (redirects.hasOwnProperty(path)) {
