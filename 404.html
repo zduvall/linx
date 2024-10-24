@@ -13,30 +13,10 @@
     <meta http-equiv="Expires" content="0" />
 
     <title>Redirecting...</title>
-    <script>
-      const redirects = {
-        'some-other-site': 'https://www.google.com',
-        'my-page': 'https://www.example.com',
-      };
 
-      // Function to handle redirection
-      function handleRedirect() {
-        console.log('Handling redirection...');
-        // Get the path part of the URL (after /link/)
-        console.log(window.location.pathname);
-        const path = window.location.pathname.split('/').pop();
-        console.log(path);
-
-        // Check if the path exists in the redirects map
-        if (redirects.hasOwnProperty(path)) {
-          window.location.href = redirects[path]; // Redirect to the target URL
-        } else {
-          window.location.href = '/link'; // Redirect to 404 page if not found
-        }
-      }
-
-      // Run the redirection logic on page load
-      window.onload = handleRedirect;
-    </script>
-  <body></body>
+    <!-- script in the head b/c content is irrelevant -->
+    <script src="/404OnLoad.js"></script>    
+  <body>
+    <script src="/onLoad.js"></script>
+  </body>
 </html>
