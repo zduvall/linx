@@ -4,13 +4,10 @@ const redirects = {
 };
 
 function handleRedirect() {
-  console.log('Redirecting...');
-  // Get the path part of the URL (after /link/)
-  console.log(window.location.pathname);
-  const path = window.location.pathname.split('/').pop();
+  const key = window.location.pathname.split('/link/').pop();
 
-  redirects.hasOwnProperty(path)
-    ? (window.location.href = redirects[path])
+  redirects.hasOwnProperty(key)
+    ? (window.location.href = redirects[key])
     : (window.location.href = '/link');
 }
 
