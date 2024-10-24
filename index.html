@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // Example key-value mapping of URLs
+      const redirects = {
+        'some-other-side': 'https://www.google.com',
+        'my-page': 'https://www.example.com',
+        // Add more key-value pairs as needed
+      };
+
+      // Function to handle redirection
+      function handleRedirect() {
+        // Get the path part of the URL (after /link/)
+        const path = window.location.pathname.split('/').pop();
+
+        // Check if the path exists in the redirects map
+        if (redirects.hasOwnProperty(path)) {
+          window.location.href = redirects[path]; // Redirect to the target URL
+        } else {
+          window.location.href = '/404.html'; // Redirect to 404 page if not found
+        }
+      }
+
+      // Run the redirection logic on page load
+      window.onload = handleRedirect;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
