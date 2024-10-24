@@ -1,6 +1,6 @@
 const redirects = {
   g: 'https://www.google.com',
-  e: 'https://www.example.com',
+  e: 'https://www.example.com', // example in readme file
 };
 
 const REPO_NAME_PATH = '/l/';
