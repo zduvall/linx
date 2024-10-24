@@ -3,41 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- force no caching to make sure latest version comes more quickly -->
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <title>Redirecting...</title>
     <script>
-      // Get the full path from the URL
-      const path = window.location.pathname;
+      // Example key-value mapping of URLs
+      const redirects = {
+        'some-other-side': 'https://www.google.com',
+        'my-page': 'https://www.example.com',
+        // Add more key-value pairs as needed
+      };
 
-      // Redirect to index.html but preserve the path
-      if (path.startsWith('/link/')) {
-        window.location.href = '/index.html' + path; // Redirect to index.html with the full path
-      } else {
-        document.write(
-          "<h1>404 - Page Not Found</h1><p>The page you're looking for doesn't exist.</p>"
-        );
+      // Function to handle redirection
+      function handleRedirect() {
+        console.log('Handling redirection...');
+        // Get the path part of the URL (after /link/)
+        console.log(window.location.pathname);
+        const path = window.location.pathname.split('/').pop();
+        console.log(path);
+
+        // Check if the path exists in the redirects map
+        if (redirects.hasOwnProperty(path)) {
+          window.location.href = redirects[path]; // Redirect to the target URL
+        } else {
+          window.location.href = '/index.html'; // Redirect to 404 page if not found
+        }
       }
+
+      // Run the redirection logic on page load
+      window.onload = handleRedirect;
     </script>
-  </head>
   <body></body>
 </html>
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 Not Found</title>
-  </head>
-  <body
-    style="
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      width: 100vw;
-    "
-  >
-    <h1>404 - Page Not Found</h1>
-    <p>Sorry, the page you're looking for doesn't exist.</p>
-  </body>
-</html> -->
