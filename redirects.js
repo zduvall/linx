@@ -7,9 +7,8 @@ const redirects = {
 };
 
 function handleRedirect() {
-  const pathSegments = window.location.pathname.substring(1).split('/');
-
   try {
+    const pathSegments = window.location.pathname.substring(1).split('/');
     window.location.href = pathSegments.reduce((acc, pS) => acc[pS], redirects);
   } catch (error) {
     window.location.href = '/';
