@@ -3,15 +3,8 @@ const redirects = {
   e: 'https://www.example.com', // example in readme file
 };
 
-const REPO_NAME_PATH = '/linx/';
-
 function handleRedirect() {
-  const pathname = window.location.pathname;
-  const key = pathname.includes(REPO_NAME_PATH)
-    ? pathname.split(REPO_NAME_PATH).pop()
-    : pathname.substring(1);
-
-  console.log({ key });
+  const key = window.location.pathname.substring(1);
 
   redirects.hasOwnProperty(key)
     ? (window.location.href = redirects[key])
