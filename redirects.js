@@ -15,7 +15,7 @@ function handleRedirect() {
 
   redirects.hasOwnProperty(key)
     ? (window.location.href = redirects[key])
-    : (window.location.href = REPO_NAME_PATH);
+    : (window.location.href = '/');
 }
 
 window.onload = handleRedirect;
