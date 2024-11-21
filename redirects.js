@@ -3,7 +3,7 @@ const redirects = {
   e: 'https://www.example.com', // example in readme file
 };
 
-const REPO_NAME_PATH = '/l/';
+const REPO_NAME_PATH = '/linx/';
 
 function handleRedirect() {
   const key = window.location.pathname.split(REPO_NAME_PATH).pop();
