@@ -6,7 +6,12 @@ const redirects = {
 const REPO_NAME_PATH = '/linx/';
 
 function handleRedirect() {
-  const key = window.location.pathname.split(REPO_NAME_PATH).pop();
+  const pathname = window.location.pathname;
+  const key = pathname.includes(REPO_NAME_PATH)
+    ? pathname.split(REPO_NAME_PATH).pop()
+    : pathname.substring(1);
+
+  console.log({ key });
 
   redirects.hasOwnProperty(key)
     ? (window.location.href = redirects[key])
