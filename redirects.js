@@ -7,16 +7,15 @@ const redirects = {
 };
 
 function handleRedirect() {
+  let redirect;
+
   try {
     const pathSegments = window.location.pathname.substring(1).split('/');
-    console.log(
-      pathSegments,
-      pathSegments.reduce((acc, pS) => acc[pS], redirects)
-    );
-    window.location.href = pathSegments.reduce((acc, pS) => acc[pS], redirects);
+    redirect = pathSegments.reduce((acc, pS) => acc[pS], redirects);
   } catch (error) {
-    window.location.href = '/';
+    // do nothing
   }
+  window.location.href = typeof redirect === 'string' ? redirect : '/';
 }
 
 window.onload = handleRedirect;
