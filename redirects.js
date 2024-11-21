@@ -9,13 +9,16 @@ const redirects = {
 function handleRedirect() {
   let redirect;
 
+  console.log('checking for redirect');
   try {
     const pathSegments = window.location.pathname.substring(1).split('/');
     redirect = pathSegments.reduce((acc, pS) => acc[pS], redirects);
   } catch (error) {
     // do nothing
   }
+  console.log('here is the link:');
   console.log(redirect);
+  console.log('now will redirect');
   setTimeout(() => {
     window.location.href = typeof redirect === 'string' ? redirect : '/';
   }, 1000);
