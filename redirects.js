@@ -16,7 +16,9 @@ function handleRedirect() {
     // do nothing
   }
   console.log(redirect);
-  window.location.href = typeof redirect === 'string' ? redirect : '/';
+  setTimeout(() => {
+    window.location.href = typeof redirect === 'string' ? redirect : '/';
+  }, 1000);
 }
 
 window.onload = handleRedirect;
