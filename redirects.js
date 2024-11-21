@@ -10,8 +10,7 @@ function handleRedirect() {
   const pathSegments = window.location.pathname.substring(1).split('/');
 
   try {
-    redirect = pathSegments.reduce((acc, pS) => acc[pS], redirects);
-    window.location.href = redirect;
+    window.location.href = pathSegments.reduce((acc, pS) => acc[pS], redirects);
   } catch (error) {
     window.location.href = '/';
   }
