@@ -15,6 +15,7 @@ function handleRedirect() {
   } catch (error) {
     // do nothing
   }
+  console.log(redirect);
   window.location.href = typeof redirect === 'string' ? redirect : '/';
 }
 
