@@ -10,15 +10,22 @@ const redirects = {
   },
 };
 
+/**
+ * Redirects based on the URL path, using predefined redirects object. If no
+ * redirect is found, redirects to root.
+ */
 function handleRedirect() {
-  let redirect;
+  let redirect = '/';
+
+  const pathSegments = window.location.pathname.slice(1).split('/');
   try {
-    const pathSegments = window.location.pathname.substring(1).split('/');
-    redirect = pathSegments.reduce((acc, pS) => acc[pS], redirects);
+    redirect =
+      pathSegments.reduce((acc, segment) => acc?.[segment], redirects) ??
+      redirect;
   } catch (error) {
-    // do nothing
+    // console.error('Error during redirect:', error);
   }
-  window.location.href = typeof redirect === 'string' ? redirect : '/';
+  window.location.href = redirect;
 }
 
 window.onload = handleRedirect;
