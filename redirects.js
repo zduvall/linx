@@ -1,8 +1,12 @@
 const redirects = {
   example: 'https://www.example.com', // example in readme file
   aridge: {
-    zoom: 'https://zoom.us/j/93256110977?pwd=amFYNzVsMFp5UXo5QzRJRU1HNm14Zz09',
-    tithing: 'https://calendar.app.google/3Bqzn3TFWRy9X1SX7',
+    zoom: {
+      bishop:
+        'https://zoom.us/j/93256110977?pwd=amFYNzVsMFp5UXo5QzRJRU1HNm14Zz09',
+      sacrament:
+        'https://zoom.us/j/98343221894?pwd=ci9BVGpEM0xKdEtpbTN0cW5xWWVOdz09',
+    },
   },
 };
 
