@@ -8,7 +8,7 @@ const app = express();
 // Serve static files from the current directory
 app.use(express.static(path.join(__dirname)));
 
-// Fallback: For any route not matched above, send 404.html
+// Fallback: For any route not matched, send 404.html (what github pages does)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '404.html'));
 });
