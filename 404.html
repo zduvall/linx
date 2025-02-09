@@ -15,6 +15,9 @@
     <title>Redirecting...</title>
 
     <!-- script in the head b/c content is irrelevant -->
+    <!-- Need to use absolulte path rather than relative to ensure the browser 
+    always fetches the file from the root directory, regardless of the current
+    URL path. This makes sure it works with multiple/sections/in/pathname -->
     <script src="/redirects.js"></script>    
   <body
     style="background-color: black;">
