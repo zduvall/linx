@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+// This file is to mock the behavior of what happens on github pages, so I can
+// test locally. To start, run `node server.js` in the terminal.
+
 // Serve static files from the current directory
 app.use(express.static(path.join(__dirname)));
 
