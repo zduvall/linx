@@ -9,7 +9,7 @@ const redirects = {
 function handleRedirect() {
   let redirect;
   try {
-    const pathSegments = window.location.pathname.substring(1).split('-');
+    const pathSegments = window.location.pathname.substring(1).split('/');
     redirect = pathSegments.reduce((acc, pS) => acc[pS], redirects);
   } catch (error) {
     // do nothing
