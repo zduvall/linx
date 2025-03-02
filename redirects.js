@@ -1,6 +1,6 @@
 const redirects = {
   example: 'https://www.example.com', // example in readme file
-  aridge: {
+  arw: {
     zoom: {
       bishop:
         'https://zoom.us/j/93256110977?pwd=amFYNzVsMFp5UXo5QzRJRU1HNm14Zz09',
