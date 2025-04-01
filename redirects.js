@@ -10,7 +10,7 @@ const redirects = {
   },
   'space-news': {
     '2025': { 
-      april: { 
+      '4': { 
         'chuck-e-sedaro': 'https://zduvall.github.io/space-news-sedaro-april-2025/' 
       }
     }
