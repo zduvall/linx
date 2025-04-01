@@ -8,6 +8,7 @@ const redirects = {
         'https://zoom.us/j/98343221894?pwd=ci9BVGpEM0xKdEtpbTN0cW5xWWVOdz09',
     },
   },
+  // april fools 2025
   'space-news': {
     '2025': { 
       '4': { 
