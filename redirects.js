@@ -8,6 +8,13 @@ const redirects = {
         'https://zoom.us/j/98343221894?pwd=ci9BVGpEM0xKdEtpbTN0cW5xWWVOdz09',
     },
   },
+  'space-news': {
+    '2025': { 
+      april: { 
+        'chuck-e-sedaro': 'https://zduvall.github.io/space-news-sedaro-april-2025/' 
+      }
+    }
+  }
 };
 
 /**
