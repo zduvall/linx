@@ -3,9 +3,9 @@ const redirects = {
   arw: {
     zoom: {
       bishop:
-        'https://zoom.us/j/93256110977?pwd=amFYNzVsMFp5UXo5QzRJRU1HNm14Zz09',
+        'https://zoom.us/j/7467106452?pwd=VnNZRWloUWlDaHhTaU5RTk1EZmlZdz09',
       sacrament:
-        'https://zoom.us/j/98343221894?pwd=ci9BVGpEM0xKdEtpbTN0cW5xWWVOdz09',
+        'https://zoom.us/j/95416464743?pwd=aZByLIv5oKuYUKZrAqdLLEf29kCVv9.1',
     },
   },
 };
