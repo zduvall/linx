@@ -8,14 +8,16 @@ const redirects = {
         'https://zoom.us/j/95416464743?pwd=aZByLIv5oKuYUKZrAqdLLEf29kCVv9.1',
     },
   },
+  bbq25: 'https://www.facebook.com/events/773654061682877',
   // april fools 2025
   'space-news': {
-    '2025': { 
-      '4': { 
-        'chuck-e-sedaro': 'https://zduvall.github.io/space-news-sedaro-april-2025/' 
-      }
-    }
-  }
+    2025: {
+      4: {
+        'chuck-e-sedaro':
+          'https://zduvall.github.io/space-news-sedaro-april-2025/',
+      },
+    },
+  },
 };
 
 /**
