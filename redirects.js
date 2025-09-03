@@ -10,6 +10,7 @@ const redirects = {
   },
   bbq25: 'https://www.facebook.com/events/773654061682877',
   bbq: 'https://www.facebook.com/events/773654061682877',
+  picnic: 'https://www.facebook.com/events/798552889314191/',
   // april fools 2025
   'space-news': {
     2025: {
